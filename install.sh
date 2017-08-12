@@ -16,5 +16,6 @@ npm install --save-dev eslint-config-rallycoding
 npm install --save react-redux redux
 npm install --save axios
 npm install --save firebase
+npm install --save redux-thunk
 
 react-native run-ios
