@@ -46,3 +46,5 @@ In file `.eslintrc`:
 `rm -fr $TMPDIR/react-*` or `npm start -- --reset-cache`  
 4. Clear build results for iOS and Android:  
 `rm -rf android/build && rm -rf ios/build`  
+5. Upgrade _react-native-cli_ to latest version:  
+`npm i -g react-native-cli`  
