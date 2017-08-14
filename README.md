@@ -48,3 +48,5 @@ In file `.eslintrc`:
 `rm -rf android/build && rm -rf ios/build`  
 5. Upgrade _react-native-cli_ to latest version:  
 `npm i -g react-native-cli`  
+6. Create iOS & Android folders with needed files:  
+`react-native upgrade`  
