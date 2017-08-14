@@ -57,5 +57,5 @@ fastlane/screenshots
 package-lock.json
 
 # ReactNative
-android/
-ios/
+android/build
+ios/build
