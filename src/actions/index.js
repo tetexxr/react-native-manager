@@ -48,8 +48,9 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
 
-  // Method name is equals to scene key
-  Actions.employeeList();
+  // Method name is equals to scene key: Actions.employeeList();
+  // Or, with nested scenes, we must navigate to the main one: Actions.main();
+  Actions.main();
 };
 
 const loginUserFail = (dispatch) => {
