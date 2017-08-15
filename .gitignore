@@ -52,8 +52,7 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 
-# VSCode
-.vscode
+# npm
 package-lock.json
 
 # ReactNative
