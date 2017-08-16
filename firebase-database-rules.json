@@ -1,0 +1,11 @@
+// https://console.firebase.google.com/project/manager-f660b/database/rules
+{
+  "rules": {
+    "users": {
+      "$uid": {
+        ".read": "$uid === auth.uid",
+        ".write": "$uid === auth.uid"
+      }
+    }
+  }
+}
