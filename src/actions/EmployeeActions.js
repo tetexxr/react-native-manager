@@ -1,7 +1,8 @@
 import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 import {
-  EMPLOYEE_UPDATE
+  EMPLOYEE_UPDATE,
+  EMPLOYEE_CREATE
 } from './Types';
 
 export const employeeUpdate = ({ prop, value }) => {
@@ -14,10 +15,13 @@ export const employeeUpdate = ({ prop, value }) => {
 export const employeeCreate = ({ name, phone, shift }) => {
   const { currentUser } = firebase.auth();
 
-  return () => {
+  return (dispatch) => {
     // Use string interpolation of ES6
     firebase.database().ref(`/users/${currentUser.uid}/employees`)
       .push({ name, phone, shift })
-      .then(() => Actions.employeeList({ type: 'reset' }));
+      .then(() => {
+        dispatch({ type: EMPLOYEE_CREATE });
+        Actions.employeeList({ type: 'reset' });
+      });
   };
 };
