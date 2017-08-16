@@ -31,6 +31,7 @@ export const employeesFetch = () => {
   const { currentUser } = firebase.auth();
 
   return (dispatch) => {
+    // Any time an employee is added by any one, an action will be dispatched
     firebase.database().ref(`/users/${currentUser.uid}/employees`)
       .on('value', snapshot => {
         dispatch({ type: EMPLOYEES_FETCH_SUCCESS, payload: snapshot.val() });
