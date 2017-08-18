@@ -15,6 +15,7 @@ npm install --save redux-thunk
 # npm install --save react-native-router-flux@3.35.0 --> this version doesn't work
 npm install --save react-native-router-flux
 npm install --save lodash
+npm install --save react-native-communications
 
 # To run in iOS device
 react-native run-ios
